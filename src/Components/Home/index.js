@@ -1,6 +1,7 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import MovieScroller from '../MovieScroller';
 
 const slideImages = [
     '/mov1.PNG',
@@ -17,7 +18,7 @@ const properties = {
 
 export default function Home() {
     return (
-        <div >
+        <div style={{display:'flex'}} >
             <Slide {...properties}>
                 {slideImages.map((each, index) => (
                     <div key={index} style={{ height: 300 }} className="each-slide">
@@ -25,11 +26,12 @@ export default function Home() {
                             backgroundImage: `url(${each})`, height: '100vh', width: '100%', backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
                         }}>
-                            <span style={{ color: 'white', font: 27 }}>Movie {index + 1}</span>
                         </div>
                     </div>
                 ))}
             </Slide>
+            <h2 className='subHeading'>Continue Watching</h2>
+            <MovieScroller/>
         </div>
     )
 }

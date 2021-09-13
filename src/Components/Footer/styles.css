@@ -1,0 +1,18 @@
+.app-logo{ 
+    width: 80px;
+}
+ul#menu li {
+    display:inline;
+    margin-bottom: 20px;
+}
+.copyright{
+    color: #8197a4;
+    font: 16px;
+    font-weight: 500;
+}
+.footerItems{
+    font:20px;
+    color:#79b8f3;
+    font-weight: 500;
+    margin-right: 10px;
+}
